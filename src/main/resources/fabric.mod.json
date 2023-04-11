@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "sandbox-entities",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Sandbox Entities",
+  "description": "Entities used in Sandbox mods",
   "authors": [
-    "Me!"
+    "Brent",
+    "Tyler"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -18,19 +19,23 @@
 
   "environment": "*",
   "entrypoints": {
+    "client": [
+      "io.sandbox.entities.MainClient"
+    ],
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.sandbox.entities.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "sandbox-entities.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.17",
     "fabric-api": "*",
     "minecraft": "~1.19.4",
-    "java": ">=17"
+    "java": ">=17",
+    "geckolib": ">=4.1.1"
   },
   "suggests": {
     "another-mod": "*"
